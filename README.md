@@ -58,7 +58,7 @@ Le projet récupère des citations en utilisant l'API [Ninjas Quotes API](https:
 ### Exemple de requête
 
 ```javascript
-fetch('https://api.api-ninjas.com/v1/quotes?category=inspiration', {
+fetch('https://api.api-ninjas.com/v1/quotes?category=categoryName', {
     method: 'GET',
     headers: {
         'X-Api-Key': 'VOTRE_CLE_API'
