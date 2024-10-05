@@ -1,0 +1,33 @@
+body {
+    background-color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#quote-box {
+    background-color: white;
+    width: 350px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#text {
+    font-size: 1.5em;
+}
+
+#author {
+    font-size: 1.2em;
+    text-align: right;
+}
+
+#tweet-link {
+    color: white;
+    text-decoration: none;
+}
+
+#tweet-link:hover {
+    text-decoration: underline;
+}
