@@ -1,8 +1,8 @@
-const fetchQuotes = (category = 'inspiration') => {
+const fetchQuotes = (category = 'graduation') => {
     fetch(`https://api.api-ninjas.com/v1/quotes?category=${category}`, {
         method: "GET",
         headers: {
-            'X-Api-Key': '6Pvz5jsuvMSCQ5tdqXrRIg==G4UnqB2dBvR67wO9', // Remplace par ta clé API
+            'X-Api-Key': '6Pvz5jsuvMSCQ5tdqXrRIg==G4UnqB2dBvR67wO9',
         },
     })
     .then(response => response.json())
@@ -12,7 +12,7 @@ const fetchQuotes = (category = 'inspiration') => {
             document.getElementById("author").textContent = `- ${data[0].author}`;
 
             // Met à jour le lien pour tweeter
-            const tweetLink = `https://twitter.com/intent/tweet?text=${encodeURIComponent(data[0].quote + " " + data[0].author)}`;
+            const tweetLink = `https://twitter.com/intent/tweet?text=${encodeURIComponent(data[0].quote + " - " + data[0].author)}`;
             document.getElementById("tweet-quote").setAttribute('href', tweetLink);
         }
     })
@@ -24,5 +24,6 @@ document.addEventListener('DOMContentLoaded', fetchQuotes);
 
 // Événement pour le bouton "Nouvelle Citation"
 document.getElementById("new-quote").addEventListener("click", () => {
+    console.log('clicking...')
     fetchQuotes();
 });
